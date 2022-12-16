@@ -15,4 +15,4 @@ Something worthy of mentioning is the change of country names in certain tables.
 ## How to use visuals
 **food production and food supply visuals**; can be operated in similar ways by simply clicking the 'play' button attached to each of them or using the sliders below them to view food production/supply results for each year.
 
-**Outlier in food supply visual**; can be changed by altering the year argument within the plot() funtion.
+**"Outliers in food supply" visual**; can be changed by altering the year argument within the plot() funtion.
