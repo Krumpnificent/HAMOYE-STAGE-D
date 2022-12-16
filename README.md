@@ -9,7 +9,7 @@ The dataset consist of a population table, a geojson file for country locations,
 
 The unit food produced was kiloton while the unit of food supply was kcal/person/day (this was converted to kiloton in my analysis)
 
-## About the data cleaning
+## About data cleaning
 Something worthy of mentioning is the change of country names in certain tables. This was done to have same country names in tables to avoid loss of data when joining. Some countries appeared to have varying identities in different tables; there was need for symmetry.
 
 ## How to use visuals
