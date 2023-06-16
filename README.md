@@ -1,18 +1,76 @@
-# Pattern Recognition
-The goal of this analysis was to find trends and patterns in food production and supply by African countries from 2004 to 2013.
+#  Exploratory Data Analysis of Africa Agriculture (2004 - 2013)
 
-## Intoduction
-Agriculture is Africa’s most important economic activity. Africa has a large population working in Agriculture as it provides employment for about two-thirds of its working population. Data on Africa’s food production and supply hold some very interesting insights about its agricultural activities which are not easily explained by mere words. This project provides insights into Africa’s agricultural activities from 2004 and 2013. I made sure to comment my codes efficiently given i used a lot of variables as i wrangled the data.
+Agriculture is Africa's most important economic activity, providing employment for about two-thirds of its working population. This project aims to provide insights into Africa's agricultural activities from 2004 to 2013 through exploratory data analysis.
 
-## About the datasets
-The dataset consist of a population table, a geojson file for country locations, a food prodution and a food supply table. 
+## Project Overview
 
-The unit food produced was kiloton while the unit of food supply was kcal/person/day (this was converted to kiloton in my analysis)
+The project follows a systematic approach of cleaning, describing, analyzing, and visualizing the data on Africa's food production and supply. The main objectives are:
 
-## About data cleaning
-Something worthy of mentioning is the change of country names in certain tables. This was done to have same country names in tables to avoid loss of data when joining. Some countries appeared to have varying identities in different tables; there was need for symmetry.
+1. Clean and preprocess the data.
+2. Explore the data to identify trends and patterns.
+3. Answer questions about food production and supply in Africa.
+4. Visualize the data to gain a better understanding.
 
-## How to use visuals
-**food production and food supply visuals**; can be operated in similar ways by simply clicking the 'play' button attached to each of them or using the sliders below them to view food production/supply results for each year.
+## Technologies Used
 
-**"Outliers in food supply" visual**; can be changed by altering the year argument within the plot() funtion.
+The project utilizes the following libraries and modules:
+
+- Python
+- pandas
+- matplotlib
+- seaborn
+- numpy
+- datetime
+- geopandas
+- plotly
+- dataframe_image
+
+## Data Import
+
+The project imports two datasets: 
+
+- `Africa Food Supply (2004 - 2013).csv` contains data on food supply in Africa.
+- `Africa Food Production (2004 - 2013).csv` contains data on food production in Africa.
+- `population.csv` contains data on population of countries
+- `countries.geojson` contains data on geographical locations of countries
+
+## Exploratory Data Analysis
+
+The exploratory data analysis process involves the following steps:
+
+1. Data Cleaning:
+   - Convert column names to lowercase.
+   - Convert the 'year' column to datetime format.
+   - Extract the year from the 'year' column.
+   - Rename columns for clarity.
+
+2. Data Transformation:
+   - Group the food production data by country and year, and calculate the total production for each year.
+   - Merge the data with a geopandas dataset to create visualizations.
+   - Convert population data from wide to long format
+   - Merge food supply data with population data for unit conversions
+
+3. Data Exploration:
+   - Identify the number of unique countries, years, and food products.
+   - Determine the top 5 most produced food items in Africa.
+   - Identify the top 5 food-producing countries in Africa.
+   - Analyze the top 5 food items produced in Nigeria.
+
+4. Data Visualization:
+   - Create choropleth maps to visualize food production by country and food supply by country from 2004 to 2013.
+   - Identify the outliers in food supply data.
+   - Compare food production and supply to analyze food deficit and oversupply.
+
+## Results
+
+- The top 5 food-producing countries in Africa from 2004 to 2013 are Nigeria, Egypt, South Africa, Ethiopia, and Tanzania.
+- The top 5 food items produced in Nigeria are Cassava, Maize, Yams, Rice (Milled Equivalent), and Sorghum.
+- The choropleth map of food production by country shows that Nigeria, Egypt, and South Africa consistently remained the top food producers.
+- The choropleth map of food supply by country shows that Egypt, Morocco, and Tunisia had the highest food supply per capita.
+- Outliers in food supply are identified, and Egypt is found to be the only outlier in the dataset.
+
+## Conclusion
+
+The exploratory data analysis provides valuable insights into Africa's agricultural activities from 2004 to 2013. The analysis highlights the top food-producing countries, the most produced items, and the disparities in food supply across the continent. By visualizing the data, patterns and trends in food production and supply are easily identifiable.
+
+This project serves as a foundation for further analysis and research on Africa's agriculture and can be extended to explore additional aspects such as crop yields, agricultural practices, and their impact on food security.
